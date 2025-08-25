@@ -68,7 +68,7 @@ document.getElementById("gpa-btn").addEventListener("click", function () {
   });
 
   const finalGPA = totalWeightedGPA / totalCreditHours;
-  document.getElementById("final-gpa").textContent = `GPA = ${finalGPA.toFixed(
+  document.getElementById("final-gpa").textContent = `SGPA = ${finalGPA.toFixed(
     2
   )}`;
   document.getElementById("final-gpa").style.display = "block";
