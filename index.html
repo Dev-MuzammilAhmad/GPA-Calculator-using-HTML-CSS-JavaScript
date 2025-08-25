@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GPA Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>GPA Calculator</h1>
+        <div class="toggle-buttons">
+          <button id="sgpa-btn" class="active">SGPA</button>
+          <button id="cgpa-btn">CGPA</button>
+        </div>
+      </div>
+
+      <div id="sgpa-section">
+        <form class="main" action="#">
+          <div>
+            <label for="subj-name">Subject Name : </label>
+            <input
+              type="text"
+              id="subj-name"
+              placeholder="Enter Subject Name"
+            />
+          </div>
+          <div>
+            <label for="credit-hours">Credit Hours : </label>
+            <input
+              type="number"
+              id="credit-hours"
+              placeholder="Enter credit-hours"
+            />
+          </div>
+          <div>
+            <label for="GPA">Subject GPA : </label>
+            <input
+              type="number"
+              step="0.01"
+              id="GPA"
+              placeholder="Enter GPA"
+            />
+          </div>
+          <button id="add-to">Add Details</button>
+        </form>
+
+        <div class="table-box" style="display: none">
+          <table>
+            <thead>
+              <tr>
+                <td>Subject Name</td>
+                <td>Credit Hours</td>
+                <td>GPA</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="result-container">
+        
+        <div class="gpa-btn-div" style="display: none">
+          <button id="gpa-btn">Calculate GPA</button>
+        </div>
+
+        <h2 id="final-gpa" ></h2>
+  
+        </div>
+        
+        <div class="clear-all-div">
+          <button id="clear-all" style="display: none">Clear All</button>
+        </div>
+      </div>
+
+      <!-- CGPA Section (initially hidden) -->
+      <div id="cgpa-section" style="display: none">
+        <form class="main" action="#">
+          <div>
+            <label for="semester-no">Semester No : </label>
+            <input
+              type="number"
+              id="semester-no"
+              placeholder="Enter Semester No"
+            />
+          </div>
+          <div>
+            <label for="semester-sgpa">Semester GPA : </label>
+            <input
+              type="number"
+              step="0.01"
+              id="semester-sgpa"
+              placeholder="Enter SGPA"
+            />
+          </div>
+          <button id="add-semester">Add Details</button>
+        </form>
+
+        <div class="table-box" style="display: none">
+          <table>
+            <thead>
+              <tr>
+                <td>Semester No</td>
+                <td>SGPA</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="cgpa-result-container">
+
+          <button id="cgpa-calc">Calculate CGPA</button>
+          <h2 id="cgpa-result" ></h2>
+
+        </div>
+        
+        <div class="clear-cgps-container">
+
+          <button id="clear-cgpa" style="display: none">Clear All</button>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
